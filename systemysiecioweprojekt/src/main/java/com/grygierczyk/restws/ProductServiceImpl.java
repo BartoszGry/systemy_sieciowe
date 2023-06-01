@@ -1,13 +1,16 @@
+package com.grygierczyk.restws;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.grygierczyk.restws.ProductService;
 import com.grygierczyk.restws.entities.Product;
 import com.grygierczyk.restws.repos.ProductRepository;
 
 import jakarta.ws.rs.core.Response;
 
+
+@Service
 public class ProductServiceImpl implements ProductService {
 
 	@Autowired
