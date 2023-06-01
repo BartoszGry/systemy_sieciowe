@@ -15,8 +15,8 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Response;
 
 
-@Consumes("application/xml,application/json")
-@Produces("application/xml,application/json")
+@Consumes("application/json")
+@Produces("application/json")
 @Path("/productservice")
 public interface ProductService {
 
