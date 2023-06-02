@@ -1,5 +1,6 @@
 package com.grygierczyk.restws;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,6 +42,12 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public Response deleteProduct(Product product) {
 		repository.delete(product);
+		return Response.ok().build();
+	}
+
+	@Override
+	public Response deleteProduct(int id) {
+		repository.deleteById(id);
 		return Response.ok().build();
 	}
 
